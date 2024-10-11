@@ -12,7 +12,7 @@ public class Main {
         var scan = new Scanner(System.in);
         int num;
         while (true) {
-            System.out.println("Which exercise do you want to see, 1-11 :");
+            System.out.println("Which exercise do you want to see, 1-16 :");
             try {
                 num = scan.nextInt();
                 switch (num) {
@@ -21,6 +21,9 @@ public class Main {
                         break;
                     case 2:
                         exercise2();
+                        break;
+                    case 3:
+                        exercise3();
                         break;
                     default:
                         System.out.println("There is no such exercise");
@@ -32,6 +35,15 @@ public class Main {
             }
         }
     }
+    public static void exercise3(){
+        LocalDate lastM = LocalDate.of(2024, 10, 7);
+        System.out.println("LocalDate of last monday: " + lastM);
+        System.out.println("This entire week using basic ISO format: ");
+        for (int i = 0; i < 7; i++){
+            System.out.println(lastM.plusDays(i).format(DateTimeFormatter.BASIC_ISO_DATE));
+        }
+    }
+
     public static void exercise2(){
         Locale locale = Locale.forLanguageTag("sv");
         LocalDate date = LocalDate.now();
