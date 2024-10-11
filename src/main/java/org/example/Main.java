@@ -25,6 +25,9 @@ public class Main {
                     case 3:
                         exercise3();
                         break;
+                    case 4:
+                        exercise4();
+                        break;
                     default:
                         System.out.println("There is no such exercise");
                         break;
@@ -35,6 +38,11 @@ public class Main {
             }
         }
     }
+    public static void exercise4(){
+        LocalDate date = LocalDate.parse("2024-10-12");
+        System.out.println("Creating a LocalDate object using parse method: " + date);
+    }
+
     public static void exercise3(){
         LocalDate lastM = LocalDate.of(2024, 10, 7);
         System.out.println("LocalDate of last monday: " + lastM);
