@@ -1,6 +1,8 @@
 package org.example;
 
 
+import java.time.LocalDate;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
@@ -26,6 +28,7 @@ public class Main {
         }
     }
     public static void exercise1(){
-
+        LocalDate date = LocalDate.now();
+        System.out.println("LocalDate of of current day: " + date);
     }
 }
