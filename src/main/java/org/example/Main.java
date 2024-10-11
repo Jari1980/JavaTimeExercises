@@ -1,9 +1,11 @@
 package org.example;
 
 
+import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
+import java.util.Date;
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -28,6 +30,9 @@ public class Main {
                     case 4:
                         exercise4();
                         break;
+                    case 5:
+                        exercise5();
+                        break;
                     default:
                         System.out.println("There is no such exercise");
                         break;
@@ -38,6 +43,12 @@ public class Main {
             }
         }
     }
+    public static void exercise5(){
+        LocalDate date = LocalDate.of(1980,8,31);
+        DayOfWeek day = date.getDayOfWeek();
+        System.out.println("Day of the date " + date + " was: " + day);
+    }
+
     public static void exercise4(){
         LocalDate date = LocalDate.parse("2024-10-12");
         System.out.println("Creating a LocalDate object using parse method: " + date);
