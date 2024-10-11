@@ -3,6 +3,7 @@ package org.example;
 
 import java.time.DayOfWeek;
 import java.time.LocalDate;
+import java.time.Period;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
 import java.util.Date;
@@ -36,6 +37,9 @@ public class Main {
                     case 6:
                         exercise6();
                         break;
+                    case 7:
+                        exercise7();
+                        break;
                     default:
                         System.out.println("There is no such exercise");
                         break;
@@ -46,6 +50,17 @@ public class Main {
             }
         }
     }
+    public static void exercise7(){
+        LocalDate date1 = LocalDate.now().plusYears(10).minusMonths(10);
+        LocalDate date2 = LocalDate.of(1980,8,31);
+        var period = Period.between(date2, date1);
+        int years = period.getYears();
+        int months = period.getMonths();
+        int days = period.getDays();
+        System.out.println("Elapsed time between " + date2 + " and " + date1 + " is: " + years +
+                "years " + months + "months and " + days + "days");
+    }
+
     public static void exercise6(){
         LocalDate date = LocalDate.now().plusYears(10).minusMonths(10);
         var month = date.getMonth();
