@@ -40,6 +40,9 @@ public class Main {
                     case 7:
                         exercise7();
                         break;
+                    case 8:
+                        exercise8();
+                        break;
                     default:
                         System.out.println("There is no such exercise");
                         break;
@@ -50,6 +53,13 @@ public class Main {
             }
         }
     }
+    public static void exercise8(){
+        var period = Period.of(4, 7, 29);
+        var date = LocalDate.now();
+        var dateU = date.plus(period);
+        System.out.println("Time now: " + date + ", adding 4y, 7m and 29d: " + dateU);
+    }
+
     public static void exercise7(){
         LocalDate date1 = LocalDate.now().plusYears(10).minusMonths(10);
         LocalDate date2 = LocalDate.of(1980,8,31);
