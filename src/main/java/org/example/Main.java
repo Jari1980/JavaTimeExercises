@@ -33,6 +33,9 @@ public class Main {
                     case 5:
                         exercise5();
                         break;
+                    case 6:
+                        exercise6();
+                        break;
                     default:
                         System.out.println("There is no such exercise");
                         break;
@@ -43,6 +46,12 @@ public class Main {
             }
         }
     }
+    public static void exercise6(){
+        LocalDate date = LocalDate.now().plusYears(10).minusMonths(10);
+        var month = date.getMonth();
+        System.out.println("Extracting month from " + date + " : " + month);
+    }
+
     public static void exercise5(){
         LocalDate date = LocalDate.of(1980,8,31);
         DayOfWeek day = date.getDayOfWeek();
