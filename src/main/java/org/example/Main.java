@@ -50,6 +50,9 @@ public class Main {
                     case 10:
                         exercise10();
                         break;
+                    case 11:
+                        exercise11();
+                        break;
                     default:
                         System.out.println("There is no such exercise");
                         break;
@@ -60,6 +63,12 @@ public class Main {
             }
         }
     }
+    public static void exercise11(){
+        String timeString = "12:00:00";
+        LocalTime time = LocalTime.parse(timeString);
+        System.out.println("Time string: " + timeString + ", Converted to LocalTime with parse: " + time);
+    }
+
     public static void exercise10(){
         LocalTime time = LocalTime.now();
         int nano = time.getNano();
