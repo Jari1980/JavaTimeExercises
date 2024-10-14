@@ -57,6 +57,9 @@ public class Main {
                     case 13:
                         exercise13();
                         break;
+                    case 14:
+                        exercise14();
+                        break;
                     default:
                         System.out.println("There is no such exercise");
                         break;
@@ -67,6 +70,12 @@ public class Main {
             }
         }
     }
+    public static void exercise14(){
+        LocalDateTime time = LocalDateTime.now();
+        String timeF = time.format(DateTimeFormatter.ofPattern("EEEE dd MMMM HH:mm ").withLocale(Locale.forLanguageTag("sv")));
+        System.out.println("LocaleDateTime formatted according to assignment such as: " + timeF);
+    }
+
     public static void exercise13(){
         LocalDateTime time = LocalDateTime.now();
         String timeS = "date: " + time.format(DateTimeFormatter.ofPattern("yyyy-MM-dd")) + " time: " + time.format(DateTimeFormatter.ofPattern("HH:mm"));
