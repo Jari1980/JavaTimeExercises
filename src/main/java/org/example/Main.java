@@ -2,10 +2,7 @@ package org.example;
 
 
 
-import java.time.DayOfWeek;
-import java.time.LocalDate;
-import java.time.LocalTime;
-import java.time.Period;
+import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
 import java.util.Date;
@@ -57,6 +54,9 @@ public class Main {
                     case 12:
                         exercise12();
                         break;
+                    case 13:
+                        exercise13();
+                        break;
                     default:
                         System.out.println("There is no such exercise");
                         break;
@@ -67,9 +67,13 @@ public class Main {
             }
         }
     }
+    public static void exercise13(){
+        LocalDateTime time = LocalDateTime.now();
+        String timeS = "date: " + time.format(DateTimeFormatter.ofPattern("yyyy-MM-dd")) + " time: " + time.format(DateTimeFormatter.ofPattern("HH:mm"));
+        System.out.println("LocaleDateTime formatted according to assignment such as: " + timeS);
+    }
+
     public static void exercise12(){
-        //LocalTime time = LocalTime.now();
-        //DateTimeFormatter format = DateTimeFormatter.ofPattern("HH:mm:ss");
         LocalTime time = LocalTime.now();
         String timeS = time.format(DateTimeFormatter.ofPattern("HH:mm:ss"));
         System.out.println("Using LocalTime: " + time + ", printing its value with pattern \"HH:mm:ss\": " + timeS);
