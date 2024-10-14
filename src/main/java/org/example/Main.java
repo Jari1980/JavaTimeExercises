@@ -47,6 +47,9 @@ public class Main {
                     case 9:
                         exercise9();
                         break;
+                    case 10:
+                        exercise10();
+                        break;
                     default:
                         System.out.println("There is no such exercise");
                         break;
@@ -57,6 +60,12 @@ public class Main {
             }
         }
     }
+    public static void exercise10(){
+        LocalTime time = LocalTime.now();
+        int nano = time.getNano();
+        System.out.println("Nano second extracted from localtime now: " + nano);
+    }
+
     public static void exercise9(){
         LocalTime time = LocalTime.now();
         System.out.println("Localtime now: " + time);
