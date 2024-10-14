@@ -60,6 +60,9 @@ public class Main {
                     case 14:
                         exercise14();
                         break;
+                    case 15:
+                        exercise15();
+                        break;
                     default:
                         System.out.println("There is no such exercise");
                         break;
@@ -70,6 +73,14 @@ public class Main {
             }
         }
     }
+    public static void exercise15(){
+        var date = LocalDate.now();
+        var time = LocalTime.now();
+        LocalDateTime dateTime = LocalDateTime.of(date, time);
+
+        System.out.println("Localdatetime object created by date object: " + date + ", and time object: " + time + ", combined:  " + dateTime);
+    }
+
     public static void exercise14(){
         LocalDateTime time = LocalDateTime.now();
         String timeF = time.format(DateTimeFormatter.ofPattern("EEEE dd MMMM HH:mm ").withLocale(Locale.forLanguageTag("sv")));
