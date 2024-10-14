@@ -3,6 +3,7 @@ package org.example;
 
 import java.time.DayOfWeek;
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.time.Period;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
@@ -43,6 +44,9 @@ public class Main {
                     case 8:
                         exercise8();
                         break;
+                    case 9:
+                        exercise9();
+                        break;
                     default:
                         System.out.println("There is no such exercise");
                         break;
@@ -53,6 +57,11 @@ public class Main {
             }
         }
     }
+    public static void exercise9(){
+        LocalTime time = LocalTime.now();
+        System.out.println("Localtime now: " + time);
+    }
+
     public static void exercise8(){
         var period = Period.of(4, 7, 29);
         var date = LocalDate.now();
