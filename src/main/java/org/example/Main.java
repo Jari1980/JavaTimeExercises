@@ -63,6 +63,9 @@ public class Main {
                     case 15:
                         exercise15();
                         break;
+                    case 16:
+                        exercise16();
+                        break;
                     default:
                         System.out.println("There is no such exercise");
                         break;
@@ -73,6 +76,16 @@ public class Main {
             }
         }
     }
+    public static void exercise16(){
+        var dateTime = LocalDateTime.now();
+        LocalDate date = LocalDate.of(dateTime.getYear(),dateTime.getMonth(), dateTime.getDayOfMonth());
+        LocalTime time = LocalTime.of(dateTime.getHour(), dateTime.getMinute(), dateTime.getSecond(), dateTime.getNano());
+        System.out.println("Creating LocalDate and Time object from LocalDateTime:\n" +
+                            "LocalDateTime: " + dateTime +"\n" +
+                            "LocalDate: " + date + "\n" +
+                            "LocalTime: " + time);
+    }
+
     public static void exercise15(){
         var date = LocalDate.now();
         var time = LocalTime.now();
